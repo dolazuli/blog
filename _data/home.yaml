@@ -1,6 +1,6 @@
 navbar_entries:
   - title: blog
-    url: /blog/
+    url: /
 
   - title: recreational programming
     url: https://chasereynolds.me
