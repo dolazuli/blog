@@ -1,4 +1,4 @@
-# title: Blog
+title: articles
 # email: your-email@example.com
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
@@ -36,5 +36,5 @@ theme_config:
   show_reading_time: true
   show_tags: true
 
-  home:
-    title_blog: Blog
+  # home:
+  #   title_blog: Blog
