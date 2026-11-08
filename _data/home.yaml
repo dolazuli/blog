@@ -2,5 +2,5 @@ navbar_entries:
   - title: blog
     url: /blog/
 
-  - title: math interactives
+  - title: recreational programming
     url: https://chasereynolds.me

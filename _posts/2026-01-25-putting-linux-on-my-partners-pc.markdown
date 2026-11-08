@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "Putting linux on my gf's pc"
-date:   2026-01-25 15:13:38 -0700
+title:  "Putting linux on my partner's pc"
+date:   2026-01-25
 ---
 
 After being left in the lurch by Microsoft in October of last year, my partner decided it was probably time to cut her teeth as a linux user. She agreed to let me install ubuntu and created a file of everything she wanted backed up.
-
-I've installed linux a handful of times, typically using gui tools for tasks like creating installation media. With this installation I tried to use the cli wherever possible in accordance with my goal to one day become a sock-wearing installation speedrunner on r/archlinux
 
 The first issue I ran into was actually creating the backup. The Windows native compression tool doesn't always handle hyphens well, and so I went ahead and downloaded 7-Zip which did the trick. After compression, the backup was >8GB, which meant it couldn't be directly copied into my single-partition FAT32 usb:
 
@@ -40,13 +38,13 @@ Synchronizing...
 exFAT format complete!
 ```
 
-Next I went and downloaded ubuntu 24.04.3 LTS `.iso` file. Installation media tools like Rufus had always been a black box to me, but its actually pretty simple to create a live cd using just coreutils. First, I listed the contents of `/dev/disk/by-id` and grabbed the symlink to the usb device. Then, I wrote the contents of the ISO directly to that location:
+Next I went and downloaded ubuntu 24.04.3 LTS `.iso` file. I learned it's actually pretty simple to create a live cd using just coreutils. First, I listed the contents of `/dev/disk/by-id` and grabbed the symlink to the usb device. Then, I wrote the contents of the ISO directly to that location:
 
 ```
 $ cat ~/Downloads/ubuntu-24.04.3-desktop-amd64.iso | sudo tee /dev/disk/by-id/usb-_USB_DISK_3.0_07215B8AB6B14809-0:0 > /dev/null; sync
 ```
 
-And with that I was ready to exorcise Windows. The PC has both a 1TB SSD and 128GB HDD. To keep things simple I just installed the whole system on the SSD with two partitions (`/` and `/boot/efi`), and then zeroed out the HDD
+And with that I was ready to purge Windows. The PC has both a 1TB SSD and 128GB HDD. To keep things simple I just installed the whole system on the SSD with two partitions (`/` and `/boot/efi`), and then zeroed out the HDD
 
 ```
 $ dd if=/dev/zero of=/dev/sdb bs=1M status=progress 
@@ -60,7 +58,7 @@ I rickrolled myself to test the audio:
 
 ![]({{ '/assets/img/rickroll.jpg' | relative_url }})
 
-Everything seemed to be in working order so I turned it over to my partner to test it out. This test failed spectactularly after she installed Steam. [The Wild at Heart](https://steamcommunity.com/app/1093290) launched, but was unusable in terms of game rendering and responsiveness to I/O devices. I'm assuming it was just missing 32-bit drivers. I realized that this kind of issue would be way more enjoyable to troubleshoot on arch so I convinced my partner to switch distros. 
+Everything seemed to be in working order so I turned it over to my partner to test it out. There was an issue when she launched a steam game called [The Wild at Heart](https://steamcommunity.com/app/1093290). It ran, but slow rendering and delayed responsiveness to I/O devices made it unusable. I assumed it was just missing 32-bit drivers. I realized that this kind of issue would be way more enjoyable to troubleshoot on arch so I convinced my partner to switch distros. 
 
 
 ```
