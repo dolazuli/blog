@@ -1,0 +1,6 @@
+navbar_entries:
+  - title: blog
+    url: /blog
+
+  - title: math interactives
+    url: https://chasereynolds.me
