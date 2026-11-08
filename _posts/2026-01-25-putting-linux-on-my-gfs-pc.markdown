@@ -2,7 +2,6 @@
 layout: post
 title:  "Putting linux on my gf's pc"
 date:   2026-01-25 15:13:38 -0700
-categories: jekyll update
 ---
 
 After being left in the lurch by Microsoft in October of last year, my partner decided it was probably time to cut her teeth as a linux user. She agreed to let me install ubuntu and created a file of everything she wanted backed up.
@@ -55,11 +54,11 @@ $ dd if=/dev/zero of=/dev/sdb bs=1M status=progress
 
 Testing the webcam:
 
-![](/assets/img/testing-video.jpg)
+![]({{ '/assets/img/testing-video.jpg' | relative_url }})
 
 I rickrolled myself to test the audio:
 
-![](/assets/img/rickroll.jpg)
+![]({{ '/assets/img/rickroll.jpg' | relative_url }})
 
 Everything seemed to be in working order so I turned it over to my partner to test it out. This test failed spectactularly after she installed Steam. [The Wild at Heart](https://steamcommunity.com/app/1093290) launched, but was unusable in terms of game rendering and responsiveness to I/O devices. I'm assuming it was just missing 32-bit drivers. I realized that this kind of issue would be way more enjoyable to troubleshoot on arch so I convinced my partner to switch distros. 
 
@@ -86,7 +85,7 @@ $ lcpci -vnn | grep -A 12 VGA
 When I launched "The Wild at Heart", it started then immediately closed. I ended up clearing this final hurdle by adding `PROTON_USE_WINE3D=1 %command%` to the game's launch options, which bypasses the 32-bit vulcan helper that was causing the issue. 
 
 
-![](/assets/img/the-wild-at-heart.jpg)
+![]({{ '/assets/img/the-wild-at-heart.jpg' | relative_url }})
 
 
 This game is super cozy by the way. You collect these things called "Spritelings" which are little Pikman-looking beings that follow you around and do your bidding.
