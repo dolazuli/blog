@@ -4,3 +4,13 @@ navbar_entries:
 
   - title: recreational programming
     url: https://recreational-programming.chasereynolds.me
+
+project_entries:
+  - title: Putting linux on my partner's pc
+    url: /2026/01/25/putting-linux-on-my-partners-pc
+    desc: UwU
+
+  - title: owo
+    subtitle: "A modern analytics dashboard"
+    url: /2026/11/08/meow
+    desc: nya

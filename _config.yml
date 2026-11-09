@@ -28,8 +28,8 @@ theme_config:
   show_navbar: true
   show_footer: false
 
-  show_projects: false
-  show_blog: true
+  show_projects: true
+  show_blog: false
   show_old_projects: false
   show_misc_list: false
 
