@@ -2,6 +2,7 @@
 layout: post
 title:  "Putting linux on my partner's pc"
 date:   2026-01-25
+
 ---
 
 After being left in the lurch by Microsoft in October of last year, my partner decided it was probably time to cut her teeth as a linux user. She agreed to let me install ubuntu and created a file of everything she wanted backed up.

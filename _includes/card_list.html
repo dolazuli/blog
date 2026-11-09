@@ -1,0 +1,34 @@
+<style>
+  .subtitle {
+  font-size: 0.5rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 4px 0 8px;
+ }
+</style>
+
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+    <li class="card">
+      <a href="{{ item.url }}">
+        <span class="header">
+          {{ item.title }}
+          {% if item.highlight %}
+            <mark>{{ item.highlight }}</mark>
+          {% endif %}
+        </span>
+
+        {% if item.subtitle %}
+          <p class="subtitle">{{ item.subtitle }}</p>
+        {% endif %}
+
+        <hr />
+
+        {% if item.desc != false %}
+          <p class="body">{{ item.desc }}</p>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

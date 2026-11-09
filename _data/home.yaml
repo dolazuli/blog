@@ -6,11 +6,13 @@ navbar_entries:
     url: https://recreational-programming.chasereynolds.me
 
 project_entries:
-  - title: Putting linux on my partner's pc
-    url: /2026/01/25/putting-linux-on-my-partners-pc
-    desc: UwU
 
-  - title: owo
-    subtitle: "A modern analytics dashboard"
-    url: /2026/11/08/meow
-    desc: nya
+  - title: Router on a stick
+    subtitle: "Nov 8th, 2026"
+    url: /2026/11/08/router-on-a-stick
+    desc: I purchased a tp-link L2 smart switch a couple months back and decided it was time to learn inter-VLAN routing.
+
+  - title: Putting linux on my partner's pc
+    subtitle: "January 25, 2026"
+    url: /2026/01/25/putting-linux-on-my-partners-pc
+    desc: After being left in the lurch by Microsoft in October of last year, my partner decided it was probably time to cut her teeth as a linux user.
