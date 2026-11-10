@@ -2,6 +2,9 @@ navbar_entries:
   - title: blog
     url: /
 
+  - title: github
+    url: https://github.com/dolazuli?tab=repositories
+
   - title: recreational programming
     url: https://recreational-programming.chasereynolds.me
 
